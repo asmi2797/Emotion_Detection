@@ -2,7 +2,7 @@
 Web Application of Emotion Detection done using HTML,CSS,Javascript,Python,FLask.
 This project was deployed on Pycharm.
 
-##Before running app.py
+## Before running app.py
 1) Make sure you install all the required packages stated in requirements.txt
 2) Create folder named 'uploads' in static and enter the path on line no.35 in app.py
 3) Config database connection accordingly.
