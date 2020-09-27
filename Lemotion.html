@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+<title>Emotion Detection</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("m2.png");
+  min-height: 100%;
+}
+
+#processed_canvas{
+width: 80vh;
+height: 60vh;
+}
+#local_canvas{
+width: 80vh;
+height: 60vh;
+}
+</style>
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+<script src="{{ url_for('static', filename='jquery-3.5.1.min.js') }}"></script>
+<body style= "background: black">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="index.html">Recognize Emotion</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#navLinks1">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#navLinks3">Contact</a>
+            </li>
+
+        </ul>
+</div>
+</nav>
+
+
+  <div class="caption">
+  <span class="border test-white">LIVE EMOTION DETECTION</span>
+  </div>
+
+
+<section class="my-5">
+    <br>
+
+            <div class=" text-center justify-content-center">
+                    <form action="/live" method="post">
+                    <div class="py-5 text-center">
+                    <button type="submit" class="btn btn-success">Start Web Camera</button>
+                        <input type="reset" value="Cancel" class="btn btn-success"  onclick="refreshPage()" />
+                    </div>
+                    </form>
+            </div>
+    <br>
+    <h5 class="text-center text-light">
+        <i>Note : Please press 'Q' key to end web camera session. </i>
+            </h5>
+</section>
+<script>
+    function refreshPage(){
+				if(confirm("Are you sure, want to cancel ?")){
+					location.reload();
+				}
+			}
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+

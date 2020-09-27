@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+<title>Emotion Detection</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("/static/Images/m2.png");
+  min-height: 100%;
+}
+
+#processed_canvas{
+width: 80vh;
+height: 60vh;
+}
+#local_canvas{
+width: 80vh;
+height: 60vh;
+}
+</style>
+<script src="{{ url_for('static', filename='jquery-3.5.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+<body style= "background: black">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="index.html">Recognize Emotion</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+ <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#navLinks1">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#navLinks3">Contact</a>
+            </li>
+
+        </ul>
+</div>
+</nav>
+
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border test-white">STATIC EMOTION DETECTION</span>
+  </div>
+</div>
+
+<section class="my-5">
+    <br>
+    <h5 class="text-center text-light">
+        <i> Please upload an image to classify emotion such as Neutral, Happy, Sad, Angry, Surprise, Disgust, Fearful </i>
+            </h5>
+            <br>
+            <div class=" text-center justify-content-center">
+                    <div class="text-center">
+                        <label for="img_src" class="btn btn-dark btn-lg">Upload Image</label>
+                        <h4><!-- Slected file will get here --></h4>
+                    </div>
+                    <!-- Create upload image function -->
+                    <input id="img_src" type="file" accept="image/*" style="visibility:hidden;" class="btn btn-dark btn-lg text-center "/>
+                    <br>
+                    <input id = "load_img_btn" type="button" onclick="loadImage()" value="Load" class="btn btn-outline-success btn-md "/>
+                    <input type="button" id="process_img" value="Find Emotion" onclick="processImage()" class="btn btn-outline-success btn-md"/>
+                    <input type="reset" value="Cancel" class="btn btn-outline-success btn-md"  onclick="refreshPage()" />
+            </div>
+</section >
+<section class="my-5 py-5 text-center">
+    <div class="text-white text-center">
+               <p style="font-family:courier;"><h3 id="face_text"></h3></p>
+               <p style="font-family:courier;"><h3 id="emotion_text"></h3></p>
+
+           </div>
+    <div class="container-fluid">
+       <div class="row">
+          <div class="col-lg-6 col-md-4 col-12">
+             <!-- This canvas is for the original image -->
+              <canvas id="local_canvas"></canvas>
+              <img id="local_img" src="" class="img-fluid pb-4"></img>
+          </div>
+           <br>
+
+           <div class="col-lg-6 col-md-4 col-12">
+               <!-- This is for the processes image -->
+               <canvas id='processed_canvas' src=""></canvas>
+
+          </div>
+
+       </div>
+    </div>
+</section>
+
+<script>
+$(document).ready(function() {
+    $('input[type="file"]').change(function(e) {
+        var name = e.target.files[0].name;
+        $("h4").text(name + ' is the selected file.');
+
+    });
+});
+function refreshPage(){
+            if(confirm("Are you sure, want to cancel ?")){
+                location.reload();
+            }
+        }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+<title>Emotion Detection</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("/static/Images/m2.png");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("/static/Images/m1.png");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("/static/Images/4.jpeg");
+  min-height: 400px;
+}
+
+.logo{
+    color:white;
+}
+.logo > span{
+    color:red;
+}
+</style>
+
+<body style= "background: black;overflow-x: hidden;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="index.html">Recognize Emotion</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#navLinks1">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#navLinks3">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Admin.html">Admin</a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+<!--
+<div id="demo" class="carousel slide" data-ride="carousel">
+<ul class="carousel-indicators">
+<li data-target="#demo" data-slide-to="0" class="active"></li>
+<li data-target="#demo" data-slide-to="1"></li>
+<li data-target="#demo" data-slide-to="2"></li>
+</ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/Images/m4.png" alt="WEL-COME" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>WEL-COME</h3>
+        <p>To Emotion Detection </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/Images/m1.png" alt="WEL-COME" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Do you know ?</h3>
+        <p>Emotions are electrochemical signals that flow through us in an unending cycle</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/Images/m2.png" alt="WEL-COME" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Intresting Fact </h3>
+        <p>There are 8 basic emotions – and countless variations and nuances of those.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>-->
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border test-white">EMOTION DETECTION SYSTEM</span>
+  </div>
+</div>
+
+<h3 id="navLinks1"></h3>
+<section class="my-5">
+        <div class="py-5">
+        <h2 class="text-center text-white">Our Services</h2>
+    </div >
+
+    <div class="row">
+        <div class="p-4"></div>
+        <div class="p-4"></div>
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-body">
+          <img class="card-img-top" src="/static/Images/e8.png" alt="Card image">
+        <h5 class="card-title">Static Emotion Detection</h5>
+        <p class="card-text">Upload image and see your emotion in image</p>
+        <a href="emotionD.html" class="btn btn-primary text-center">Check Out</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-body">
+          <img class="card-img-top" src="/static/Images/e7.png" alt="Card image">
+        <h5 class="card-title"> Live Emotion Detection</h5>
+        <p class="card-text">Start web camera and see your emotion in real time</p>
+        <a href="Lemotion.html" class="btn btn-primary text-center">Check Out</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+            <!--<div class="col-lg-4 col-md-4 col-12">
+                    <div class="card" >
+                      <img class="card-img-top" src="/static/Images/m2.png" alt="Card image">
+                      <div class="card-body">
+                        <h4 class="card-title">Image comparision</h4>
+                          <p class="card-text">This will help you in compairing your image.</p>
+                            <a href="compareI.html" class="btn btn-primary">Let's Try</a>
+                      </div>
+                    </div>
+            </div>-->
+
+
+
+
+
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border test-white">GALLERY</span>
+  </div>
+</div>
+
+
+<section class="my-5">
+    <div class="container-fluid">
+       <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+             <img src="/static/Images/o6.png" class="img-fluid pb-4" style="width: 10cm ;height: 10cm">
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12">
+             <img src="/static/Images/o1.png" class="img-fluid pb-4" style="width: 10cm ;height: 10cm">
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12">
+             <img src="/static/Images/o2.jpg" class="img-fluid pb-4" style="width: 10cm ;height: 10cm">
+          </div>
+<!--
+          <div class="col-lg-4 col-md-4 col-12">
+             <img src="/static/Images/o3.png" class="img-fluid pb-4">
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12">
+             <img src="/static/Images/n2.jpg" class="img-fluid pb-4">
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12">
+             <img src="/static/Images/n1.jpg" class="img-fluid pb-4">
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12">
+             <img src="/static/Images/n2.jpg" class="img-fluid pb-4">
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12">
+             <img src="/static/Images/n2.jpg" class="img-fluid pb-4">
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-12">
+             <img src="/static/Images/n2.jpg" class="img-fluid pb-4">
+          </div>-->
+
+
+
+       </div>
+
+    </div>
+</section>
+
+
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border test-white">ABOUT US</span>
+  </div>
+</div>
+<section class="my-5">
+    <h3 id="navLinks2"></h3>
+    <div class="container-fluid">
+            <div class="text-center" >
+                <h2 class="display-3 text-white">Team</h2>
+                <p class="py-2 text-white">We are final year students and this is our final year project. Main purpose of building this system is to create something which we are familiar with concepts and hence Emotion detection is a fascinating topic so why not!. Here we are providing you a web application of Emotion Recognisation System which can be using image or video.
+                    <br><br>Feel free to write to us in below form. Feedback is always appreciated!
+                </p>
+            </div>
+    </div>
+</section>
+<section class="my-5">
+    <h3 id="navLinks3"></h3>
+    <div class="py-5">
+        <h2 class="text-center text-white">Reach Out to us</h2>
+    </div >
+
+    <div class="w-50 m-auto">
+        <form action="contactus" method="post" onSubmit="alert('Thank you for your feedback.');">
+            <div class="form-group">
+            <div class="logo">Name<span>*</span></div>
+                <input type="text" name="name" autocomplete="off" pattern="[A-Za-z]{1,32}" placeholder="Damini Gaikwad" class="form-control" class="dorm-control" required>
+            </div>
+            <div class="form-group">
+            <div class="logo">Email Id<span>*</span></div>
+                <input type="email" name="email" autocomplete="off" placeholder="email@address.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" class="dorm-control" required>
+
+            </div>
+            <div class="form-group">
+            <div class="logo">Mobile Number<span>*</span></div>
+                <input type="text" name="mobile" autocomplete="off" pattern="[7-8-9][0-9]{9}" placeholder="7/8/9xxxxxxxxx" class="form-control" class="dorm-control" required>
+            </div>
+            <div class="form-group">
+            <div class="logo">Comments<span>*</span></div>
+                <textarea name="comments" placeholder="Write your feedback here" class="form-control" required>
+             </textarea>
+            </div>
+            <div class="center">
+                <button type="submit" class="btn btn-success text-center">Submit</button>
+            </div>
+
+        </form>
+    </div>
+    </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
