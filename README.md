@@ -6,8 +6,8 @@ This project was deployed on Pycharm.
 1) Make sure you install all the required packages stated in requirements.txt
 2) Create folder named 'uploads' in static and enter the path on line no.35 in app.py
 3) Config database connection accordingly.
-4) Database name is flask and it contains 3 tables.
--image
+4) Database name is flask and it contains 3 tables namely image,query and admin.
+
 ```
 +----------+--------------+------+-----+-------------------+-------------------+
 | Field    | Type         | Null | Key | Default           | Extra             |
