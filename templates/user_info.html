@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emotion Detection</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="index.html">Recognize Emotion</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#navLinks1">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#navLinks3">Contact</a>
+            </li>
+
+        </ul>
+</div>
+</nav>
+
+
+<section class="my-5">
+    <h3 id="navLinks3"></h3>
+    <div class="py-5">
+        <h2 class="text-center text-white">Reach Out to us</h2>
+        <h5 class="text-center " style="color:red;">All fields are mandatory</h5>
+
+    </div >
+
+    <div class="w-50 m-auto">
+        <form action="contactus" method="post" onSubmit="alert('Thank you for your feedback.');">
+            <div class="form-group">
+                <label class="text-white">Name</label>
+                <input type="text" name="name" autocomplete="off" pattern="[A-Za-z]{1,32}" placeholder="Damini Gaikwad" class="form-control" class="dorm-control" required>
+
+            </div>
+            <div class="form-group">
+                <label class="text-white">Email ID</label>
+                <input type="email" name="email" autocomplete="off" placeholder="email@address.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" class="dorm-control" required>
+
+            </div>
+            <div class="form-group">
+                <label class="text-white">Mobile number</label>
+                <input type="text" name="mobile" autocomplete="off" pattern="[7-8-9][0-9]{9}" placeholder="7/8/9xxxxxxxxx" class="form-control" class="dorm-control" required>
+            </div>
+            <div class="form-group">
+                <label class="text-white">Comments</label>
+                <textarea name="comments" placeholder="Write your feedback here" class="form-control" required>
+             </textarea>
+            </div>
+            <div class="center">
+                <button type="submit" class="btn btn-success text-center">Submit</button>
+            </div>
+
+        </form>
+    </div>
+    </section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
