@@ -32,7 +32,7 @@ app = Flask(__name__)
 CORS(app)
 app.debug = True
 
-app.config["UPLOAD_FOLDER"] = "C:\\Users\\OMKAR KAMBLE\\PycharmProjects\\flaskProject\\static\\uploads"
+app.config["UPLOAD_FOLDER"] = " "#path of upload folder created in static folder
 
 # Configure db
 app.config['MYSQL_HOST'] = 'localhost'
